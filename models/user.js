@@ -18,16 +18,14 @@ const UserSchema = new Schema({
     required: true,
     minlength: 6
   },
-  address: {
-    street: {
-      type: String
-    },
-    postcode: {
-      type: Number
-    },
-    city: {
-      type: String
-    }
+  street: {
+    type: String
+  },
+  postcode: {
+    type: Number
+  },
+  city: {
+    type: String
   },
   phone: {
     type: Number
