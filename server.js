@@ -99,6 +99,55 @@ app.get('/users/:userId', async (req, res) => {
   }
 })
 
+app.put('/users/:userId', authenticateUser)
+app.put('/users/:userId', async (req, res) => {
+  const { userId } = req.params
+  const { name, email, street, postcode, city, phone } = req.body
+
+  try {
+    const user = await User.findOne({ _id: userId })
+
+    if (user) {
+      user.name = name
+      user.email = email
+      user.street = street
+      user.postcode = postcode
+      user.city = city
+      user.phone = phone
+      user.save()
+      res.status(201).json({ message: `User ${userId} updated.` })
+    } else {
+      res.status(404).json({
+        message: 'Could not update user.'
+      })
+    }
+  } catch (err) {
+    res.status(400).json({
+      message: 'Invalid request.',
+      errors: err.errors
+    })
+  }
+})
+
+app.delete('/users/:userId', authenticateUser)
+app.delete('/users/:userId', async (req, res) => {
+  const { userId } = req.params
+  try {
+    await User.findByIdandRemove(userId)
+      .then(user => {
+        if (!user) {
+          res.status(404).json({ message: `Could not delete user ${userId}.` })
+        }
+        res.status(204).json({ message: `User ${userId} deleted.` })
+      })
+  } catch (err) {
+    res.status(400).json({
+      message: 'Invalid request.',
+      errors: err.errors
+    })
+  }
+})
+
 app.post('/sessions', async (req, res) => {
   const user = await User.findOne({ email: req.body.email })
   if (user && bcrypt.compareSync(req.body.password, user.password)) {
