@@ -82,6 +82,23 @@ app.post('/users', async (req, res) => {
   }
 })
 
+app.get('/users/:userId', authenticateUser)
+app.get('/users/:userId', async (req, res) => {
+  const { userId } = req.params
+
+  try {
+    const user = await User.findOne({ _id: userId })
+      .populate('orderHistory', 'createdAt')
+
+    res.status(200).json(user)
+  } catch (err) {
+    res.status(400).json({
+      message: 'Invalid request.',
+      errors: err.errors
+    })
+  }
+})
+
 app.post('/sessions', async (req, res) => {
   const user = await User.findOne({ email: req.body.email })
   if (user && bcrypt.compareSync(req.body.password, user.password)) {
