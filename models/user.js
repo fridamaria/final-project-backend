@@ -16,7 +16,7 @@ const UserSchema = new Schema({
   password: {
     type: String,
     required: true,
-    minlength: 8
+    minlength: 6
   },
   address: {
     street: {
@@ -32,6 +32,10 @@ const UserSchema = new Schema({
   phone: {
     type: Number
   },
+  orderHistory: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Order'
+  }],
   accessToken: {
     type: String,
     default: () => crypto.randomBytes(128).toString('hex')
