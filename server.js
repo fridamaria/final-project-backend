@@ -5,7 +5,7 @@ import mongoose from 'mongoose'
 import crypto from 'crypto'
 import bcrypt from 'bcrypt-nodejs'
 import Product from './models/product'
-import { restart } from 'nodemon'
+import User from './models/user'
 
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/finalAPI"
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -40,7 +40,10 @@ app.get('/products', async (req, res) => {
     const products = await Product.find()
     res.status(200).json(products)
   } catch (err) {
-    res.status(400).json({ message: 'Invalid request', errors: err.errors })
+    res.status(400).json({
+      message: 'Invalid request.',
+      errors: err.error
+    })
   }
 })
 
@@ -51,7 +54,40 @@ app.get('products/:productId', async (req, res) => {
     const product = await Product.findOne({ _id: productId })
     res.status(200).json(product)
   } catch (err) {
-    res.status(400).json({ message: 'Invalid request', errors: err.errors })
+    res.status(400).json({
+      message: 'Invalid request.',
+      errors: err.errors
+    })
+  }
+})
+
+app.post('/users', async (req, res) => {
+  const { name, email, password } = req.body
+  const encryptedPassword = bcrypt.hashSync(password)
+
+  try {
+    const user = new User({ name, email, password: encryptedPassword })
+    const newUser = await user.save()
+
+    res.status(201).json({
+      message: 'User created.',
+      userId: newUser._id,
+      accessToken: newUser.accessToken
+    })
+  } catch (err) {
+    res.status(400).json({
+      message: 'Could not create user.',
+      errors: err.errors
+    })
+  }
+})
+
+app.post('/sessions', async (req, res) => {
+  const user = await User.findOne({ email: req.body.email })
+  if (user && bcrypt.compareSync(req.body.password, user.password)) {
+    res.json({ userId: user._id, accessToken: user.accessToken })
+  } else {
+    res.status(400).json({ notFound: true })
   }
 })
 
