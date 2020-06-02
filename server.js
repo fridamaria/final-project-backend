@@ -4,6 +4,8 @@ import cors from 'cors'
 import mongoose from 'mongoose'
 import crypto from 'crypto'
 import bcrypt from 'bcrypt-nodejs'
+import Product from './models/product'
+import { restart } from 'nodemon'
 
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/finalAPI"
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -31,6 +33,26 @@ app.use(bodyParser.json())
 // Root endpoint listing endpoints and methods
 app.get('/', (req, res) => {
   res.send(listEndpoints(app))
+})
+
+app.get('/products', async (req, res) => {
+  try {
+    const products = await Product.find()
+    res.status(200).json(products)
+  } catch (err) {
+    res.status(400).json({ message: 'Invalid request', errors: err.errors })
+  }
+})
+
+app.get('products/:productId', async (req, res) => {
+  const { productId } = req.params
+
+  try {
+    const product = await Product.findOne({ _id: productId })
+    res.status(200).json(product)
+  } catch (err) {
+    res.status(400).json({ message: 'Invalid request', errors: err.errors })
+  }
 })
 
 // Start the server
