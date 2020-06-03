@@ -1,45 +1,47 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
-const Schema = mongoose.Schema
+const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
   name: {
     type: String,
     required: true,
-    minlength: 1
+    minlength: 1,
   },
   email: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
   },
   password: {
     type: String,
     required: true,
-    minlength: 6
+    minlength: 6,
   },
   street: {
-    type: String
+    type: String,
   },
   postcode: {
-    type: Number
+    type: Number,
   },
   city: {
-    type: String
+    type: String,
   },
   phone: {
-    type: Number
+    type: Number,
   },
-  orderHistory: [{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Order'
-  }],
+  orderHistory: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Order",
+    },
+  ],
   accessToken: {
     type: String,
-    default: () => crypto.randomBytes(128).toString('hex')
-  }
-})
+    default: () => crypto.randomBytes(128).toString("hex"),
+  },
+});
 
-const User = mongoose.model('User', UserSchema)
+const User = mongoose.model("User", UserSchema);
 
-module.exports = User
+module.exports = User;
