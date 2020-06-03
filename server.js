@@ -6,10 +6,24 @@ import bcrypt from 'bcrypt-nodejs'
 import Product from './models/product'
 import User from './models/user'
 import Order from './models/order'
+import productsData from './data/products.json'
 
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/finalAPI"
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.Promise = Promise
+
+if (process.env.RESET_DB) {
+  console.log('Resetting database...')
+
+  const seedDatabase = async () => {
+    // Clears database
+    await Product.deleteMany()
+
+    // Saves all books from booksData to the database
+    await productsData.forEach(product => new Product(product).save())
+  }
+  seedDatabase()
+}
 
 const authenticateUser = async (req, res, next) => {
   const user = await User.findOne({ accessToken: req.header('Authorization') })

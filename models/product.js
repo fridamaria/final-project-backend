@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const categories = ['Accessories', 'Coats', 'Denim', 'Dresses', 'Jackets', 'Jumpsuits', 'Knitwear', 'Pants', 'Shoes', 'Shorts', 'Skirts']
+const categories = ['Accessories', 'Coats', 'Denim', 'Dresses', 'Jackets', 'Jumpsuits', 'Knitwear', 'Pants', 'Shoes', 'Shorts', 'Skirts', 'Tops']
 const sizes = ['XS', 'S', 'M', 'L', 'XL', '36', '37', '38', '39', '40', '41', '42']
 
 const Schema = mongoose.Schema
