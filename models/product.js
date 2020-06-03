@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 
-const categories = ['Coats', 'Denim', 'Dresses', 'Jackets', 'Jumpsuits', 'Knitwear', 'Pants', 'Shorts', 'Skirts']
-const sizes = ['XS', 'S', 'M', 'L', 'XL']
+const categories = ['Accessories', 'Coats', 'Denim', 'Dresses', 'Jackets', 'Jumpsuits', 'Knitwear', 'Pants', 'Shoes', 'Shorts', 'Skirts']
+const sizes = ['XS', 'S', 'M', 'L', 'XL', '36', '37', '38', '39', '40', '41', '42']
 
 const Schema = mongoose.Schema
 
@@ -33,7 +33,6 @@ const ProductSchema = new Schema({
   },
   size: {
     type: String,
-    required: true,
     enum: sizes
   },
   price: {
