@@ -5,6 +5,7 @@ import mongoose from 'mongoose'
 import bcrypt from 'bcrypt-nodejs'
 import Product from './models/product'
 import User from './models/user'
+import Order from './models/order'
 
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/finalAPI"
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -154,6 +155,41 @@ app.post('/sessions', async (req, res) => {
   } else {
     res.status(400).json({ notFound: true })
   }
+})
+
+app.post('/orders', authenticateUser)
+app.post('/orders', async (req, res) => {
+  const { items, shipTo } = req.body
+  const order = new Order(req.body)
+
+  try {
+    const order = await new Order({ items, shipTo }).save()
+      .populate('items')
+      .populate('shipTo')
+    res.status(201).json(placedOrder)
+  } catch (err) {
+    res.status(400).json({
+      message: 'Could not place order.',
+      errors: err.errors
+    })
+  }
+
+})
+
+app.get('/orders/:orderId', authenticateUser)
+app.get('/orders/:orderId', async (req, res) => {
+  const { orderId } = req.params
+
+  try {
+    const order = await Order.findOne({ _id: orderId })
+    res.status(200).json(order)
+  } catch (err) {
+    res.status(400).json({
+      message: 'Invalid request.',
+      errors: err.errors
+    })
+  }
+
 })
 
 // Start the server
