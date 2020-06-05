@@ -40,7 +40,7 @@
     "category": "Dresses",
     "size": "S",
     "price": 30,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -51,7 +51,7 @@
     "category": "Tops",
     "size": "M",
     "price": 25,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -62,7 +62,7 @@
     "category": "Pants",
     "size": "S",
     "price": 35,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -73,7 +73,7 @@
     "category": "Dresses",
     "size": "S",
     "price": 30,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -84,7 +84,7 @@
     "category": "Tops",
     "size": "M",
     "price": 25,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -95,7 +95,7 @@
     "category": "Pants",
     "size": "S",
     "price": 35,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -106,7 +106,7 @@
     "category": "Dresses",
     "size": "S",
     "price": 30,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -117,7 +117,7 @@
     "category": "Tops",
     "size": "M",
     "price": 25,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -128,7 +128,7 @@
     "category": "Pants",
     "size": "S",
     "price": 35,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -139,7 +139,7 @@
     "category": "Dresses",
     "size": "S",
     "price": 30,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -150,7 +150,7 @@
     "category": "Tops",
     "size": "M",
     "price": 25,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -161,7 +161,7 @@
     "category": "Pants",
     "size": "S",
     "price": 35,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -172,7 +172,7 @@
     "category": "Dresses",
     "size": "S",
     "price": 30,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -183,7 +183,7 @@
     "category": "Tops",
     "size": "M",
     "price": 25,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -194,7 +194,7 @@
     "category": "Pants",
     "size": "S",
     "price": 35,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -205,7 +205,7 @@
     "category": "Dresses",
     "size": "S",
     "price": 30,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -216,7 +216,7 @@
     "category": "Tops",
     "size": "M",
     "price": 25,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -227,7 +227,7 @@
     "category": "Pants",
     "size": "S",
     "price": 35,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -238,7 +238,7 @@
     "category": "Dresses",
     "size": "S",
     "price": 30,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -249,7 +249,7 @@
     "category": "Tops",
     "size": "M",
     "price": 25,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -260,7 +260,7 @@
     "category": "Pants",
     "size": "S",
     "price": 35,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -271,7 +271,7 @@
     "category": "Dresses",
     "size": "S",
     "price": 30,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -282,7 +282,7 @@
     "category": "Tops",
     "size": "M",
     "price": 25,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -293,7 +293,7 @@
     "category": "Pants",
     "size": "S",
     "price": 35,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -304,7 +304,7 @@
     "category": "Dresses",
     "size": "S",
     "price": 30,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -315,7 +315,7 @@
     "category": "Tops",
     "size": "M",
     "price": 25,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -326,7 +326,304 @@
     "category": "Pants",
     "size": "S",
     "price": 35,
-    "featured": "true",
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Dress",
+    "description": "Black mini tank dress",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/b6ed1e81_b1c8.jpg",
+    "imageId": "abc123",
+    "category": "Dresses",
+    "size": "S",
+    "price": 30,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Top",
+    "description": "White split-neck puff-sleeve shirt",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/29e8a681_3e4e.jpg",
+    "imageId": "bcd123",
+    "category": "Tops",
+    "size": "M",
+    "price": 25,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Pants",
+    "description": "Beige pleat pant",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/7bce42b3_370e.jpg",
+    "imageId": "cde123",
+    "category": "Pants",
+    "size": "S",
+    "price": 35,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Dress",
+    "description": "Black mini tank dress",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/b6ed1e81_b1c8.jpg",
+    "imageId": "abc123",
+    "category": "Dresses",
+    "size": "S",
+    "price": 30,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Top",
+    "description": "White split-neck puff-sleeve shirt",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/29e8a681_3e4e.jpg",
+    "imageId": "bcd123",
+    "category": "Tops",
+    "size": "M",
+    "price": 25,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Pants",
+    "description": "Beige pleat pant",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/7bce42b3_370e.jpg",
+    "imageId": "cde123",
+    "category": "Pants",
+    "size": "S",
+    "price": 35,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Dress",
+    "description": "Black mini tank dress",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/b6ed1e81_b1c8.jpg",
+    "imageId": "abc123",
+    "category": "Dresses",
+    "size": "S",
+    "price": 30,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Top",
+    "description": "White split-neck puff-sleeve shirt",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/29e8a681_3e4e.jpg",
+    "imageId": "bcd123",
+    "category": "Tops",
+    "size": "M",
+    "price": 25,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Pants",
+    "description": "Beige pleat pant",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/7bce42b3_370e.jpg",
+    "imageId": "cde123",
+    "category": "Pants",
+    "size": "S",
+    "price": 35,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Dress",
+    "description": "Black mini tank dress",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/b6ed1e81_b1c8.jpg",
+    "imageId": "abc123",
+    "category": "Dresses",
+    "size": "S",
+    "price": 30,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Top",
+    "description": "White split-neck puff-sleeve shirt",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/29e8a681_3e4e.jpg",
+    "imageId": "bcd123",
+    "category": "Tops",
+    "size": "M",
+    "price": 25,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Pants",
+    "description": "Beige pleat pant",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/7bce42b3_370e.jpg",
+    "imageId": "cde123",
+    "category": "Pants",
+    "size": "S",
+    "price": 35,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Dress",
+    "description": "Black mini tank dress",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/b6ed1e81_b1c8.jpg",
+    "imageId": "abc123",
+    "category": "Dresses",
+    "size": "S",
+    "price": 30,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Top",
+    "description": "White split-neck puff-sleeve shirt",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/29e8a681_3e4e.jpg",
+    "imageId": "bcd123",
+    "category": "Tops",
+    "size": "M",
+    "price": 25,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Pants",
+    "description": "Beige pleat pant",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/7bce42b3_370e.jpg",
+    "imageId": "cde123",
+    "category": "Pants",
+    "size": "S",
+    "price": 35,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Dress",
+    "description": "Black mini tank dress",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/b6ed1e81_b1c8.jpg",
+    "imageId": "abc123",
+    "category": "Dresses",
+    "size": "S",
+    "price": 30,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Top",
+    "description": "White split-neck puff-sleeve shirt",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/29e8a681_3e4e.jpg",
+    "imageId": "bcd123",
+    "category": "Tops",
+    "size": "M",
+    "price": 25,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Pants",
+    "description": "Beige pleat pant",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/7bce42b3_370e.jpg",
+    "imageId": "cde123",
+    "category": "Pants",
+    "size": "S",
+    "price": 35,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Dress",
+    "description": "Black mini tank dress",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/b6ed1e81_b1c8.jpg",
+    "imageId": "abc123",
+    "category": "Dresses",
+    "size": "S",
+    "price": 30,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Top",
+    "description": "White split-neck puff-sleeve shirt",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/29e8a681_3e4e.jpg",
+    "imageId": "bcd123",
+    "category": "Tops",
+    "size": "M",
+    "price": 25,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Pants",
+    "description": "Beige pleat pant",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/7bce42b3_370e.jpg",
+    "imageId": "cde123",
+    "category": "Pants",
+    "size": "S",
+    "price": 35,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Dress",
+    "description": "Black mini tank dress",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/b6ed1e81_b1c8.jpg",
+    "imageId": "abc123",
+    "category": "Dresses",
+    "size": "S",
+    "price": 30,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Top",
+    "description": "White split-neck puff-sleeve shirt",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/29e8a681_3e4e.jpg",
+    "imageId": "bcd123",
+    "category": "Tops",
+    "size": "M",
+    "price": 25,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Pants",
+    "description": "Beige pleat pant",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/7bce42b3_370e.jpg",
+    "imageId": "cde123",
+    "category": "Pants",
+    "size": "S",
+    "price": 35,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Dress",
+    "description": "Black mini tank dress",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/b6ed1e81_b1c8.jpg",
+    "imageId": "abc123",
+    "category": "Dresses",
+    "size": "S",
+    "price": 30,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Top",
+    "description": "White split-neck puff-sleeve shirt",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/29e8a681_3e4e.jpg",
+    "imageId": "bcd123",
+    "category": "Tops",
+    "size": "M",
+    "price": 25,
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Pants",
+    "description": "Beige pleat pant",
+    "imageUrl": "https://res.cloudinary.com/everlane/image/upload/c_scale/c_fill,dpr_2.0,f_auto,q_auto,w_auto:100:1200/v1/i/7bce42b3_370e.jpg",
+    "imageId": "cde123",
+    "category": "Pants",
+    "size": "S",
+    "price": 35,
+    "featured": "false",
     "sold": "false"
   }
 ]

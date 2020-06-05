@@ -6,7 +6,7 @@ import bcrypt from 'bcrypt-nodejs'
 import Product from './models/product'
 import User from './models/user'
 import Order from './models/order'
-import productsData from './data/products.json'
+import productsData from './data/productsLong.json'
 
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/finalAPI"
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })

@@ -7,7 +7,7 @@
     "category": "Dresses",
     "size": "S",
     "price": 30,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -18,7 +18,7 @@
     "category": "Tops",
     "size": "M",
     "price": 25,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   },
   {
@@ -29,7 +29,7 @@
     "category": "Pants",
     "size": "S",
     "price": 35,
-    "featured": "true",
+    "featured": "false",
     "sold": "false"
   }
 ]
