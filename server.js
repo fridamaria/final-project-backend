@@ -81,11 +81,27 @@ app.get('products/:productId', async (req, res) => {
 })
 
 app.post('/users', async (req, res) => {
-  const { name, email, password, street, postcode, city, telephone } = req.body
+  const {
+    name,
+    email,
+    password,
+    street,
+    postcode,
+    city,
+    telephone
+  } = req.body
   const encryptedPassword = bcrypt.hashSync(password)
 
   try {
-    const user = new User({ name, email, password: encryptedPassword, street, postcode, city, telephone })
+    const user = new User({
+      name,
+      email,
+      password: encryptedPassword,
+      street,
+      postcode,
+      city,
+      telephone
+    })
     const newUser = await user.save()
 
     res.status(201).json({
@@ -127,7 +143,14 @@ app.get('/users/:userId', async (req, res) => {
 app.put('/users/:userId', authenticateUser)
 app.put('/users/:userId', async (req, res) => {
   const { userId } = req.params
-  const { name, email, street, postcode, city, phone } = req.body
+  const {
+    name,
+    email,
+    street,
+    postcode,
+    city,
+    telephone
+  } = req.body
 
   try {
     const user = await User.findOne({ _id: userId })
@@ -138,7 +161,7 @@ app.put('/users/:userId', async (req, res) => {
       user.street = street
       user.postcode = postcode
       user.city = city
-      user.phone = phone
+      user.telephone = telephone
       user.save()
       res.status(201).json({ message: `User ${userId} updated.` })
     } else {
@@ -175,6 +198,7 @@ app.delete('/users/:userId', async (req, res) => {
 
 app.post('/sessions', async (req, res) => {
   const user = await User.findOne({ email: req.body.email })
+
   if (user && bcrypt.compareSync(req.body.password, user.password)) {
     res.json(user)
   } else {
@@ -184,7 +208,15 @@ app.post('/sessions', async (req, res) => {
 
 app.post('/orders', authenticateUser)
 app.post('/orders', async (req, res) => {
-  const { items, userId, name, street, postcode, city, telephone } = req.body
+  const {
+    items,
+    userId,
+    name,
+    street,
+    postcode,
+    city,
+    telephone
+  } = req.body
 
   try {
     const order = await new Order(req.body).save()
