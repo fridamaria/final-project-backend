@@ -20,16 +20,20 @@ const UserSchema = new Schema({
     minlength: 6
   },
   street: {
-    type: String
+    type: String,
+    required: true
   },
   postcode: {
-    type: Number
+    type: Number,
+    required: true,
   },
   city: {
-    type: String
+    type: String,
+    required: true,
   },
-  phone: {
-    type: Number
+  telephone: {
+    type: Number,
+    required: true,
   },
   orderHistory: [{
     type: mongoose.Schema.Types.ObjectId,

@@ -76,17 +76,16 @@ app.get('products/:productId', async (req, res) => {
 })
 
 app.post('/users', async (req, res) => {
-  const { name, email, password } = req.body
+  const { name, email, password, street, postcode, city, telephone } = req.body
   const encryptedPassword = bcrypt.hashSync(password)
 
   try {
-    const user = new User({ name, email, password: encryptedPassword })
+    const user = new User({ name, email, password: encryptedPassword, street, postcode, city, telephone })
     const newUser = await user.save()
 
     res.status(201).json({
       message: 'User created.',
-      userId: newUser._id,
-      accessToken: newUser.accessToken
+      user: newUser
     })
   } catch (err) {
     res.status(400).json({
@@ -165,7 +164,7 @@ app.delete('/users/:userId', async (req, res) => {
 app.post('/sessions', async (req, res) => {
   const user = await User.findOne({ email: req.body.email })
   if (user && bcrypt.compareSync(req.body.password, user.password)) {
-    res.json({ userId: user._id, accessToken: user.accessToken })
+    res.json(user)
   } else {
     res.status(400).json({ notFound: true })
   }
