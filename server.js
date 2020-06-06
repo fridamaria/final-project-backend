@@ -173,14 +173,14 @@ app.post('/sessions', async (req, res) => {
 
 app.post('/orders', authenticateUser)
 app.post('/orders', async (req, res) => {
-  const { items, shipTo } = req.body
-  const order = new Order(req.body)
+  /* const { items, shipTo } = req.body */
+  /* const order = new Order(req.body) */
 
   try {
-    const order = await new Order({ items, shipTo }).save()
-      .populate('items')
-      .populate('shipTo')
-    res.status(201).json(placedOrder)
+    const order = await new Order(req.body).save()
+    /* .populate('items') */
+    /* .populate('shipTo') */
+    res.status(201).json(order)
   } catch (err) {
     res.status(400).json({
       message: 'Could not place order.',
@@ -196,6 +196,7 @@ app.get('/orders/:orderId', async (req, res) => {
 
   try {
     const order = await Order.findOne({ _id: orderId })
+      .populate('items', 'name price')
     res.status(200).json(order)
   } catch (err) {
     res.status(400).json({
