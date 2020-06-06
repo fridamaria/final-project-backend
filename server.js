@@ -9,7 +9,12 @@ import Order from './models/order'
 import productsData from './data/productsLong.json'
 
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/finalAPI"
-mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(mongoUrl, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false
+})
 mongoose.Promise = Promise
 
 if (process.env.RESET_DB) {
@@ -101,7 +106,14 @@ app.get('/users/:userId', async (req, res) => {
 
   try {
     const user = await User.findOne({ _id: userId })
-      .populate('orderHistory', 'createdAt')
+      .populate({
+        path: 'orderHistory',
+        select: 'items createdAt status',
+        populate: {
+          path: 'items',
+          select: 'name price'
+        }
+      })
 
     res.status(200).json(user)
   } catch (err) {
@@ -172,13 +184,17 @@ app.post('/sessions', async (req, res) => {
 
 app.post('/orders', authenticateUser)
 app.post('/orders', async (req, res) => {
-  /* const { items, shipTo } = req.body */
-  /* const order = new Order(req.body) */
+  const { items, userId, name, street, postcode, city, telephone } = req.body
 
   try {
     const order = await new Order(req.body).save()
-    /* .populate('items') */
-    /* .populate('shipTo') */
+
+    await User.findOneAndUpdate(
+      { _id: userId },
+      {
+        $push: { orderHistory: order._id }
+      }
+    )
     res.status(201).json(order)
   } catch (err) {
     res.status(400).json({
@@ -189,6 +205,7 @@ app.post('/orders', async (req, res) => {
 
 })
 
+// May only need this for dev purpose and not use in frontend as the users orders are included in /users/:userId
 app.get('/orders/:orderId', authenticateUser)
 app.get('/orders/:orderId', async (req, res) => {
   const { orderId } = req.params
