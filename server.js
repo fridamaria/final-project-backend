@@ -19,7 +19,7 @@ if (process.env.RESET_DB) {
     // Clears database
     await Product.deleteMany()
 
-    // Saves all books from booksData to the database
+    // Saves all data from productsData to the database
     await productsData.forEach(product => new Product(product).save())
   }
   seedDatabase()
@@ -49,6 +49,7 @@ app.get('/', (req, res) => {
   res.send(listEndpoints(app))
 })
 
+//All products
 app.get('/products', async (req, res) => {
   try {
     const products = await Product.find()
@@ -61,7 +62,8 @@ app.get('/products', async (req, res) => {
   }
 })
 
-app.get('products/:productId', async (req, res) => {
+//Product detail page
+app.get('/products/:productId', async (req, res) => {
   const { productId } = req.params
 
   try {
@@ -75,6 +77,7 @@ app.get('products/:productId', async (req, res) => {
   }
 })
 
+//Sign up new user
 app.post('/users', async (req, res) => {
   const { name, email, password, street, postcode, city, telephone } = req.body
   const encryptedPassword = bcrypt.hashSync(password)
@@ -95,6 +98,7 @@ app.post('/users', async (req, res) => {
   }
 })
 
+//Profile page
 app.get('/users/:userId', authenticateUser)
 app.get('/users/:userId', async (req, res) => {
   const { userId } = req.params
@@ -112,6 +116,7 @@ app.get('/users/:userId', async (req, res) => {
   }
 })
 
+//Edit profile page
 app.put('/users/:userId', authenticateUser)
 app.put('/users/:userId', async (req, res) => {
   const { userId } = req.params
@@ -126,7 +131,7 @@ app.put('/users/:userId', async (req, res) => {
       user.street = street
       user.postcode = postcode
       user.city = city
-      user.phone = phone
+      user.telephone = telephone
       user.save()
       res.status(201).json({ message: `User ${userId} updated.` })
     } else {
@@ -142,6 +147,7 @@ app.put('/users/:userId', async (req, res) => {
   }
 })
 
+//Delete user
 app.delete('/users/:userId', authenticateUser)
 app.delete('/users/:userId', async (req, res) => {
   const { userId } = req.params
@@ -161,6 +167,7 @@ app.delete('/users/:userId', async (req, res) => {
   }
 })
 
+//Login existing user
 app.post('/sessions', async (req, res) => {
   const user = await User.findOne({ email: req.body.email })
   if (user && bcrypt.compareSync(req.body.password, user.password)) {
@@ -170,6 +177,7 @@ app.post('/sessions', async (req, res) => {
   }
 })
 
+//Post order / go to checkout
 app.post('/orders', authenticateUser)
 app.post('/orders', async (req, res) => {
   const { items, shipTo } = req.body
@@ -189,6 +197,7 @@ app.post('/orders', async (req, res) => {
 
 })
 
+//See order summary
 app.get('/orders/:orderId', authenticateUser)
 app.get('/orders/:orderId', async (req, res) => {
   const { orderId } = req.params
