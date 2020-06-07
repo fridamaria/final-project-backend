@@ -4,6 +4,10 @@ import cors from 'cors'
 import mongoose from 'mongoose'
 import bcrypt from 'bcrypt-nodejs'
 import Product from './models/product'
+import Accessory from './models/accessory'
+import Clothing from './models/clothing'
+import Jeans from './models/jeans'
+import Shoes from './models/shoes'
 import User from './models/user'
 import Order from './models/order'
 import productsData from './data/productsLong.json'
@@ -62,6 +66,58 @@ app.get('/products', async (req, res) => {
     res.status(400).json({
       message: 'Invalid request.',
       errors: err.error
+    })
+  }
+})
+
+// May be used if users should to be able to post own clothes for sale, has to be adapted to include cloudinary
+app.post('/products', authenticateUser)
+app.post('/products', async (req, res) => {
+  const { name, description, imageUrl, imageId, price, category, size, userId } = req.body
+
+  const seller = await User.findOne({ _id: userId })
+
+  let Schema
+
+  if (category === 'Accessories') { Schema = Accessory }
+  else if (category === 'Shoes') { Schema = Shoes }
+  else if (category === 'Jeans') { Schema = Jeans }
+  else { Schema = Clothing }
+
+  try {
+    const product = await new Schema({
+      name,
+      description,
+      imageUrl,
+      imageId,
+      price,
+      category,
+      size,
+      seller
+    })
+    product.save((err, product) => {
+      if (product) {
+        res.status(201).json({
+          message: 'Product created.',
+          id: product._id
+        })
+      } else {
+        res.status(400).json({
+          message: 'Could not create product.',
+          errors: err.errors
+        })
+      }
+    })
+    await User.findOneAndUpdate(
+      { _id: userId },
+      {
+        $push: { products: product._id }
+      }
+    )
+  } catch (err) {
+    res.status(400).json({
+      message: 'Could not create product.',
+      errors: err.errors
     })
   }
 })
