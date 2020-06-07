@@ -29,7 +29,7 @@ if (process.env.RESET_DB) {
     await Product.deleteMany()
 
     // Saves all books from booksData to the database
-    await productsData.forEach(product => new Product(product).save())
+    await productsData.forEach(product => new Clothing(product).save())
   }
   seedDatabase()
 }
