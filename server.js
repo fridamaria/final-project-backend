@@ -73,7 +73,16 @@ app.get('/products', async (req, res) => {
 // May be used if users should to be able to post own clothes for sale, has to be adapted to include cloudinary
 app.post('/products', authenticateUser)
 app.post('/products', async (req, res) => {
-  const { name, description, imageUrl, imageId, price, category, size, userId } = req.body
+  const {
+    name,
+    description,
+    imageUrl,
+    imageId,
+    price,
+    category,
+    size,
+    userId
+  } = req.body
 
   const seller = await User.findOne({ _id: userId })
 
@@ -122,7 +131,7 @@ app.post('/products', async (req, res) => {
   }
 })
 
-app.get('products/:productId', async (req, res) => {
+app.get('/products/:productId', async (req, res) => {
   const { productId } = req.params
 
   try {

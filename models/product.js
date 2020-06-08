@@ -44,6 +44,10 @@ const ProductSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'User'
   },
+  createdByAdmin: {
+    type: Boolean,
+    default: false
+  },
   createdAt: {
     type: Date,
     default: Date.now
