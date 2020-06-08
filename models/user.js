@@ -39,6 +39,10 @@ const UserSchema = new Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Order'
   }],
+  products: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Product'
+  }],
   accessToken: {
     type: String,
     default: () => crypto.randomBytes(128).toString('hex')

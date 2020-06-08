@@ -11,9 +11,34 @@ const OrderSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'Product'
   }],
-  shipTo: {
+  userId: {
     type: Schema.Types.ObjectId,
     ref: 'User'
+  },
+  name: {
+    type: String,
+    required: true
+  },
+  street: {
+    type: String,
+    required: true
+  },
+  postcode: {
+    type: Number,
+    required: true,
+  },
+  city: {
+    type: String,
+    required: true,
+  },
+  telephone: {
+    type: Number,
+    required: true,
+  },
+  status: {
+    type: String,
+    enum: ['Pending', 'Processing', 'Shipped'],
+    default: 'Pending'
   }
 })
 

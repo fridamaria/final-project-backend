@@ -1,9 +1,9 @@
 import mongoose from 'mongoose'
 
-const categories = ['Accessories', 'Coats', 'Denim', 'Dresses', 'Jackets', 'Jumpsuits', 'Knitwear', 'Pants', 'Shoes', 'Shorts', 'Skirts', 'Tops']
-const sizes = ['XS', 'S', 'M', 'L', 'XL', '36', '37', '38', '39', '40', '41', '42']
-
 const Schema = mongoose.Schema
+const options = {
+  discriminatorKey: 'type'
+}
 
 const ProductSchema = new Schema({
   name: {
@@ -26,15 +26,6 @@ const ProductSchema = new Schema({
     type: String,
     required: true
   },
-  category: {
-    type: String,
-    required: true,
-    enum: categories
-  },
-  size: {
-    type: String,
-    enum: sizes
-  },
   price: {
     type: Number,
     required: true
@@ -48,8 +39,20 @@ const ProductSchema = new Schema({
     type: Boolean,
     required: true,
     default: false
+  },
+  seller: {
+    type: Schema.Types.ObjectId,
+    ref: 'User'
+  },
+  createdByAdmin: {
+    type: Boolean,
+    default: false
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
   }
-})
+}, options)
 
 const Product = mongoose.model('Product', ProductSchema)
 
