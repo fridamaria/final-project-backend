@@ -3,6 +3,7 @@ import bodyParser from 'body-parser'
 import cors from 'cors'
 import mongoose from 'mongoose'
 import bcrypt from 'bcrypt-nodejs'
+import dotenv from 'dotenv'
 import Product from './models/product'
 import Accessory from './models/accessory'
 import Clothing from './models/clothing'
@@ -11,6 +12,28 @@ import Shoes from './models/shoes'
 import User from './models/user'
 import Order from './models/order'
 import productsData from './data/productsLong.json'
+import cloudinaryFramework from 'cloudinary'
+import multer from 'multer'
+import cloudinaryStorage from 'multer-storage-cloudinary'
+
+const cloudinary = cloudinaryFramework.v2;
+dotenv.config()
+
+cloudinary.config({
+  cloud_name: 'dciqrlzem', // this needs to be whatever you get from cloudinary
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET
+})
+
+const storage = cloudinaryStorage({
+  cloudinary,
+  params: {
+    folder: 'products',
+    allowedFormats: ['jpg', 'png', 'jpeg'],
+    transformation: [{ width: 900, height: 900, crop: 'limit' }],
+  },
+})
+const parser = multer({ storage })
 
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/finalAPI"
 mongoose.connect(mongoUrl, {
@@ -96,12 +119,11 @@ app.get('/products', async (req, res) => {
 
 // May be used if users should to be able to post own clothes for sale, has to be adapted to include cloudinary
 app.post('/products', authenticateUser)
-app.post('/products', async (req, res) => {
+//Cloudinary middleware included here:
+app.post('/products', parser.single('image'), async (req, res) => {
   const {
     name,
     description,
-    imageUrl,
-    imageId,
     price,
     category,
     size,
@@ -109,6 +131,8 @@ app.post('/products', async (req, res) => {
   } = req.body
 
   const seller = await User.findOne({ _id: userId })
+  const imageUrl = req.file.path
+  const imageId = req.file.filename
 
   let Schema
 
@@ -130,9 +154,9 @@ app.post('/products', async (req, res) => {
     })
     product.save((err, product) => {
       if (product) {
-        res.status(201).json({
+        res.status(201).json( {
           message: 'Product created.',
-          id: product._id
+          id: product._id,
         })
       } else {
         res.status(400).json({
