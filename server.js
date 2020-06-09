@@ -67,11 +67,25 @@ app.get('/products', async (req, res) => {
   const perPage = 20
   const skip = perPage * (pageNbr - 1)
 
+  const allProducts = await Product.find()
+  const numProducts = allProducts.length
+  const pages = Math.ceil(numProducts / perPage)
+
   try {
     const products = await Product.find()
       .limit(perPage)
       .skip(skip)
-    res.status(200).json(products)
+    if (numProducts === 0) {
+      res.status(200).json({ message: ERR_NO_PRODUCTS })
+    } else if (+page > pages) {
+      res.status(404).json({ message: ERR_NO_PAGE })
+    } else {
+      res.status(200).json({
+        total_pages: pages,
+        page: pageNbr,
+        products: products
+      })
+    }
   } catch (err) {
     res.status(400).json({
       message: 'Invalid request.',
