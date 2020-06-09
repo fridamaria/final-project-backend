@@ -80,12 +80,18 @@ app.get('/products', async (req, res) => {
     } else if (+page > pages) {
       res.status(404).json({ message: ERR_NO_PAGE })
     } else {
-      res.status(200).json({
-        total_pages: pages,
-        page: pageNbr,
-        products: products
-      })
+      res.status(200).json(products)
     }
+
+    //This screwed things up in the frontend:
+    // {
+    //   res.status(200).json({
+    //     total_pages: pages,
+    //     page: pageNbr,
+    //     products: products
+    //   })
+    // }
+
   } catch (err) {
     res.status(400).json({
       message: 'Invalid request.',
