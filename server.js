@@ -84,13 +84,11 @@ app.get('/products', async (req, res) => {
     }
 
     //This screwed things up in the frontend:
-    // {
     //   res.status(200).json({
     //     total_pages: pages,
     //     page: pageNbr,
     //     products: products
     //   })
-    // }
 
   } catch (err) {
     res.status(400).json({
