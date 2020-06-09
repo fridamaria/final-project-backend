@@ -64,7 +64,7 @@ app.get('/products', async (req, res) => {
 
   // Pagination
   const pageNbr = +page || 1
-  const perPage = 20
+  const perPage = 18
   const skip = perPage * (pageNbr - 1)
 
   const allProducts = await Product.find()
