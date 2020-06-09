@@ -60,8 +60,17 @@ app.get('/', (req, res) => {
 
 // All products
 app.get('/products', async (req, res) => {
+  const { page } = req.query
+
+  // Pagination
+  const pageNbr = +page || 1
+  const perPage = 20
+  const skip = perPage * (pageNbr - 1)
+
   try {
     const products = await Product.find()
+      .limit(perPage)
+      .skip(skip)
     res.status(200).json(products)
   } catch (err) {
     res.status(400).json({
