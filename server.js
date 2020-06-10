@@ -87,7 +87,7 @@ app.get('/products', async (req, res) => {
 
   // Pagination
   const pageNbr = +page || 1
-  const perPage = 18
+  const perPage = 12
   const skip = perPage * (pageNbr - 1)
 
   const allProducts = await Product.find()
@@ -154,7 +154,7 @@ app.post('/products', parser.single('image'), async (req, res) => {
     })
     product.save((err, product) => {
       if (product) {
-        res.status(201).json( {
+        res.status(201).json({
           message: 'Product created.',
           id: product._id,
         })
