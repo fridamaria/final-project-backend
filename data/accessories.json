@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Sunglasses",
+    "description": "Brown sunglasses",
+    "imageUrl": "",
+    "imageId": "",
+    "category": "Accessories",
+    "size": "L",
+    "price": "40",
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Sunglasses",
+    "description": "Red sunglasses",
+    "imageUrl": "",
+    "imageId": "",
+    "category": "Accessories",
+    "size": "S",
+    "price": "35",
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Sunglasses",
+    "description": "White sunglasses",
+    "imageUrl": "",
+    "imageId": "",
+    "category": "Accessories",
+    "size": "M",
+    "price": "22",
+    "featured": "false",
+    "sold": "false"
+  }
+]

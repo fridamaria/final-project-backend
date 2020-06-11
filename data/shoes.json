@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Shoes",
+    "description": "Blue high heels",
+    "imageUrl": "",
+    "imageId": "",
+    "category": "Shoes",
+    "size": "36",
+    "price": "30",
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Shoes",
+    "description": "White sneakers",
+    "imageUrl": "",
+    "imageId": "",
+    "category": "Shoes",
+    "size": "38",
+    "price": "35",
+    "featured": "false",
+    "sold": "false"
+  },
+  {
+    "name": "Shoes",
+    "description": "Brown shoes",
+    "imageUrl": "",
+    "imageId": "",
+    "category": "Shoes",
+    "size": "42",
+    "price": "40",
+    "featured": "false",
+    "sold": "false"
+  }
+]
