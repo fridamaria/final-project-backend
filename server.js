@@ -341,11 +341,14 @@ app.post('/orders', async (req, res) => {
   try {
     const order = await new Order(req.body).save()
 
+    items.forEach(async (item) => await Product.findOneAndUpdate(
+      { _id: item },
+      { $set: { sold: true } }
+    ))
+
     await User.findOneAndUpdate(
       { _id: userId },
-      {
-        $push: { orderHistory: order._id }
-      }
+      { $push: { orderHistory: order._id } }
     )
     res.status(201).json(order)
   } catch (err) {
