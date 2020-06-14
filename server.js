@@ -127,9 +127,9 @@ app.get('/products', async (req, res) => {
 })
 
 // May be used if users should to be able to post own clothes for sale, has to be adapted to include cloudinary
-// app.post('/products', authenticateUser)
+app.post('/products', authenticateUser)
 // Cloudinary middleware included here:
-app.post('/products', authenticateUser, parser.single('image'), async (req, res) => {
+app.post('/products', parser.single('image'), async (req, res) => {
   const {
     name,
     description,
@@ -241,8 +241,8 @@ app.post('/users', async (req, res) => {
 })
 
 // Profile page
-// app.get('/users/:userId', authenticateUser)
-app.get('/users/:userId', authenticateUser, async (req, res) => {
+app.get('/users/:userId', authenticateUser)
+app.get('/users/:userId', async (req, res) => {
   const { userId } = req.params
 
   try {
@@ -266,8 +266,8 @@ app.get('/users/:userId', authenticateUser, async (req, res) => {
 })
 
 // Edit profile page
-// app.put('/users/:userId', authenticateUser)
-app.put('/users/:userId', authenticateUser, async (req, res) => {
+app.put('/users/:userId', authenticateUser)
+app.put('/users/:userId', async (req, res) => {
   const { userId } = req.params
   const {
     name,
@@ -304,8 +304,8 @@ app.put('/users/:userId', authenticateUser, async (req, res) => {
 })
 
 // Delete user
-// app.delete('/users/:userId', authenticateUser)
-app.delete('/users/:userId', authenticateUser, async (req, res) => {
+app.delete('/users/:userId', authenticateUser)
+app.delete('/users/:userId', async (req, res) => {
   const { userId } = req.params
   try {
     await User.findByIdandRemove(userId)
@@ -335,8 +335,8 @@ app.post('/sessions', async (req, res) => {
 })
 
 // Post order / go to checkout
-// app.post('/orders', authenticateUser)
-app.post('/orders', authenticateUser, async (req, res) => {
+app.post('/orders', authenticateUser)
+app.post('/orders', async (req, res) => {
   const {
     items,
     userId,
@@ -371,8 +371,8 @@ app.post('/orders', authenticateUser, async (req, res) => {
 
 // See order summary
 // May only need this for dev purpose and not use in frontend as the users orders are included in /users/:userId
-// app.get('/orders/:orderId', authenticateUser)
-app.get('/orders/:orderId', authenticateUser, async (req, res) => {
+app.get('/orders/:orderId', authenticateUser)
+app.get('/orders/:orderId', async (req, res) => {
   const { orderId } = req.params
 
   try {
