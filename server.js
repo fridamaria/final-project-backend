@@ -97,7 +97,7 @@ app.get('/products', async (req, res) => {
   const sortProducts = (sort) => {
     if (sort === 'high') return { price: -1 }
     else if (sort === 'low') return { price: 1 }
-    else if (sort === 'newest') return { createdAt: -1 }
+    else return { createdAt: -1 }
   }
 
   try {
