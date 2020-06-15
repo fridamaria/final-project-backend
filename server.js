@@ -54,10 +54,10 @@ if (process.env.RESET_DB) {
     // Clears database
     await Product.deleteMany()
 
-    // Saves all data from productsData to the database
+    // Saves all data from productsData, shoesData and accessoriesData to the database
     await productData.forEach(product => new Clothing(product).save())
     await shoesData.forEach(product => new Shoes(product).save())
-    await accessoriesData.forEach(product => new Accessories(product).save())
+    await accessoriesData.forEach(product => new Accessory(product).save())
   }
   seedDatabase()
 }

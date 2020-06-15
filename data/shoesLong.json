@@ -1,27 +1,5 @@
 [
   {
-    "name": "Work boots",
-    "description": "Brown Timberland work boots",
-    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/v1592213179/products/person-wearing-pair-of-brown-timberland-work-boots-and-black-718981_xtyrkm.jpg",
-    "category": "Shoes",
-    "size": "40",
-    "price": "35",
-    "featured": "false",
-    "sold": "false",
-    "createdByAdmin": "true"
-  },
-  {
-    "name": "White sneakers",
-    "description": "White Nike Air Force",
-    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/v1592213180/products/person-wearing-white-nike-air-force-1-sneakers-2048547_wjqcj1.jpg",
-    "category": "Shoes",
-    "size": "41",
-    "price": "35",
-    "featured": "false",
-    "sold": "false",
-    "createdByAdmin": "true"
-  },
-  {
     "name": "Yellow shoes",
     "description": "Yellow shoes with low chunky heel",
     "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/v1592213181/products/person-wearing-yellow-shoes-1335463_k2mexn.jpg",
