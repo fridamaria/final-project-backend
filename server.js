@@ -11,7 +11,9 @@ import Jeans from './models/jeans'
 import Shoes from './models/shoes'
 import User from './models/user'
 import Order from './models/order'
-import productsData from './data/productsLong.json'
+import productData from './data/productsLong.json'
+import shoesData from './data/shoesLong.json'
+import accessoriesData from './data/accessoriesLong.json'
 import cloudinaryFramework from 'cloudinary'
 import multer from 'multer'
 import cloudinaryStorage from 'multer-storage-cloudinary'
@@ -44,6 +46,7 @@ mongoose.connect(mongoUrl, {
 })
 mongoose.Promise = Promise
 
+// Delete Seed-function? 
 if (process.env.RESET_DB) {
   console.log('Resetting database...')
 
@@ -52,7 +55,9 @@ if (process.env.RESET_DB) {
     await Product.deleteMany()
 
     // Saves all data from productsData to the database
-    await productsData.forEach(product => new Clothing(product).save())
+    await productData.forEach(product => new Clothing(product).save())
+    await shoesData.forEach(product => new Shoes(product).save())
+    await accessoriesData.forEach(product => new Accessories(product).save())
   }
   seedDatabase()
 }

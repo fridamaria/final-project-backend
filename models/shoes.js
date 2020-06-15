@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 import Product from './product'
 
 const Schema = mongoose.Schema
-const shoeSizes = [36, 37, 38, 39, 40, 41, 42]
+const shoeSizes = [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46]
 
 const Shoes = Product.discriminator('Shoes', new Schema({
   category: {
