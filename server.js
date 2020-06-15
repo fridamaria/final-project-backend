@@ -52,7 +52,7 @@ if (process.env.RESET_DB) {
 
   const seedDatabase = async () => {
     // Clears database
-    await Product.deleteMany()
+    await Product.deleteMany({ createdByAdmin: true })
 
     // Saves all data from productsData, shoesData and accessoriesData to the database
     await productData.forEach(product => new Clothing(product).save())
@@ -77,6 +77,20 @@ const app = express()
 
 const listEndpoints = require('express-list-endpoints')
 
+// Messages
+const PRODUCT_CREATED = 'Product created.'
+const USER_CREATED = 'User created.'
+const USER_UPDATED = 'User updated.'
+const USER_DELETED = 'User deleted.'
+const ERR_INVALID_REQUEST = 'Invalid request.'
+const ERR_NO_PRODUCTS = 'No products found.'
+const ERR_NO_PAGE = 'No page found.'
+const ERR_CREATE_PRODUCT = 'Could not create product.'
+const ERR_CREATE_USER = 'Could not create user.'
+const ERR_UPDATE_USER = 'Could not update user.'
+const ERR_DELETE_USER = 'Could not delete user.'
+const ERR_PLACE_ORDER = 'Could not place order.'
+
 // Add middlewares to enable cors and json body parsing
 app.use(cors())
 app.use(bodyParser.json())
@@ -88,13 +102,16 @@ app.get('/', (req, res) => {
 
 // All products
 app.get('/products', async (req, res) => {
-  const { page, category, sort } = req.query
+  const { page, createdByAdmin, featured, sort } = req.query
   // Pagination
   const pageNbr = +page || 1
   const perPage = 12
   const skip = perPage * (pageNbr - 1)
 
-  const allProducts = await Product.find()
+  const allProducts = await Product.find({
+    createdByAdmin: createdByAdmin,
+    featured: featured
+  })
   const numProducts = allProducts.length
   const pages = Math.ceil(numProducts / perPage)
 
@@ -107,7 +124,8 @@ app.get('/products', async (req, res) => {
 
   try {
     const products = await Product.find({
-      // Lägga in att den ska hitta rätt kategori här
+      createdByAdmin: createdByAdmin,
+      featured: featured
     })
       .sort(sortProducts(sort))
       .limit(perPage)
@@ -129,7 +147,7 @@ app.get('/products', async (req, res) => {
     }
   } catch (err) {
     res.status(400).json({
-      message: 'Invalid request.',
+      message: ERR_INVALID_REQUEST,
       errors: err.error
     })
   }
@@ -173,13 +191,13 @@ app.post('/products', parser.single('image'), async (req, res) => {
     product.save((err, product) => {
       if (product) {
         res.status(201).json({
-          message: 'Product created.',
+          message: PRODUCT_CREATED,
           id: product._id,
           product: product
         })
       } else {
         res.status(400).json({
-          message: 'Could not create product.',
+          message: ERR_CREATE_PRODUCT,
           errors: err.errors
         })
       }
@@ -192,7 +210,7 @@ app.post('/products', parser.single('image'), async (req, res) => {
     )
   } catch (err) {
     res.status(400).json({
-      message: 'Could not create product.',
+      message: ERR_CREATE_PRODUCT,
       errors: err.errors
     })
   }
@@ -211,7 +229,7 @@ app.get('/products/:productId', async (req, res) => {
     res.status(200).json(product)
   } catch (err) {
     res.status(400).json({
-      message: 'Invalid request.',
+      message: ERR_INVALID_REQUEST,
       errors: err.errors
     })
   }
@@ -243,12 +261,12 @@ app.post('/users', async (req, res) => {
     const newUser = await user.save()
 
     res.status(201).json({
-      message: 'User created.',
+      message: USER_CREATED,
       user: newUser
     })
   } catch (err) {
     res.status(400).json({
-      message: 'Could not create user.',
+      message: ERR_CREATE_USER,
       errors: err.errors
     })
   }
@@ -273,7 +291,7 @@ app.get('/users/:userId', async (req, res) => {
     res.status(200).json(user)
   } catch (err) {
     res.status(400).json({
-      message: 'Invalid request.',
+      message: ERR_INVALID_REQUEST,
       errors: err.errors
     })
   }
@@ -303,15 +321,19 @@ app.put('/users/:userId', async (req, res) => {
       user.city = city
       user.telephone = telephone
       user.save()
-      res.status(201).json({ message: `User ${userId} updated.` })
+      res.status(201).json({
+        user: userId,
+        message: USER_UPDATED
+      })
     } else {
       res.status(404).json({
-        message: 'Could not update user.'
+        user: userId,
+        message: ERR_UPDATE_USER
       })
     }
   } catch (err) {
     res.status(400).json({
-      message: 'Invalid request.',
+      message: ERR_INVALID_REQUEST,
       errors: err.errors
     })
   }
@@ -322,16 +344,22 @@ app.delete('/users/:userId', authenticateUser)
 app.delete('/users/:userId', async (req, res) => {
   const { userId } = req.params
   try {
-    await User.findByIdandRemove(userId)
+    await User.findByIdandRemove({ _id: userId })
       .then(user => {
         if (!user) {
-          res.status(404).json({ message: `Could not delete user ${userId}.` })
+          res.status(404).json({
+            user: userId,
+            message: ERR_DELETE_USER
+          })
         }
-        res.status(204).json({ message: `User ${userId} deleted.` })
+        res.status(204).json({
+          user: userId,
+          message: USER_DELETED
+        })
       })
   } catch (err) {
     res.status(400).json({
-      message: 'Invalid request.',
+      message: ERR_INVALID_REQUEST,
       errors: err.errors
     })
   }
@@ -376,7 +404,7 @@ app.post('/orders', async (req, res) => {
     res.status(201).json(order)
   } catch (err) {
     res.status(400).json({
-      message: 'Could not place order.',
+      message: ERR_PLACE_ORDER,
       errors: err.errors
     })
   }
@@ -395,7 +423,7 @@ app.get('/orders/:orderId', async (req, res) => {
     res.status(200).json(order)
   } catch (err) {
     res.status(400).json({
-      message: 'Invalid request.',
+      message: ERR_INVALID_REQUEST,
       errors: err.errors
     })
   }
