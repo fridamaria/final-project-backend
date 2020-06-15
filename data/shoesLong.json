@@ -8,7 +8,8 @@
     "size": "36",
     "price": "30",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -19,7 +20,8 @@
     "size": "38",
     "price": "35",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -30,7 +32,8 @@
     "size": "42",
     "price": "40",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -41,7 +44,8 @@
     "size": "36",
     "price": "30",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -52,7 +56,8 @@
     "size": "38",
     "price": "35",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -63,7 +68,8 @@
     "size": "42",
     "price": "40",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -74,7 +80,8 @@
     "size": "36",
     "price": "30",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -85,7 +92,8 @@
     "size": "38",
     "price": "35",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -96,7 +104,8 @@
     "size": "42",
     "price": "40",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -107,7 +116,8 @@
     "size": "36",
     "price": "30",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -118,7 +128,8 @@
     "size": "38",
     "price": "35",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -129,7 +140,8 @@
     "size": "42",
     "price": "40",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -140,7 +152,8 @@
     "size": "36",
     "price": "30",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -151,7 +164,8 @@
     "size": "38",
     "price": "35",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -162,7 +176,8 @@
     "size": "42",
     "price": "40",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -173,7 +188,8 @@
     "size": "36",
     "price": "30",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -184,7 +200,8 @@
     "size": "38",
     "price": "35",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -195,7 +212,8 @@
     "size": "42",
     "price": "40",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -206,7 +224,8 @@
     "size": "36",
     "price": "30",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -217,7 +236,8 @@
     "size": "38",
     "price": "35",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -228,7 +248,8 @@
     "size": "42",
     "price": "40",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -239,7 +260,8 @@
     "size": "36",
     "price": "30",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -250,7 +272,8 @@
     "size": "38",
     "price": "35",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -261,7 +284,8 @@
     "size": "42",
     "price": "40",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -272,7 +296,8 @@
     "size": "36",
     "price": "30",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -283,7 +308,8 @@
     "size": "38",
     "price": "35",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -294,7 +320,8 @@
     "size": "42",
     "price": "40",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -305,7 +332,8 @@
     "size": "36",
     "price": "30",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -316,7 +344,8 @@
     "size": "38",
     "price": "35",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Shoes",
@@ -327,6 +356,7 @@
     "size": "42",
     "price": "40",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   }
 ]

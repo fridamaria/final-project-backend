@@ -5,10 +5,10 @@
     "imageUrl": "",
     "imageId": "",
     "category": "Accessories",
-    "size": "L",
     "price": "40",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -16,10 +16,10 @@
     "imageUrl": "",
     "imageId": "",
     "category": "Accessories",
-    "size": "S",
     "price": "35",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -28,9 +28,9 @@
     "imageId": "",
     "category": "Accessories",
     "size": "M",
-    "price": "22",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -38,10 +38,10 @@
     "imageUrl": "",
     "imageId": "",
     "category": "Accessories",
-    "size": "L",
     "price": "40",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -49,10 +49,10 @@
     "imageUrl": "",
     "imageId": "",
     "category": "Accessories",
-    "size": "S",
     "price": "35",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -61,9 +61,9 @@
     "imageId": "",
     "category": "Accessories",
     "size": "M",
-    "price": "22",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -71,10 +71,10 @@
     "imageUrl": "",
     "imageId": "",
     "category": "Accessories",
-    "size": "L",
     "price": "40",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -82,10 +82,10 @@
     "imageUrl": "",
     "imageId": "",
     "category": "Accessories",
-    "size": "S",
     "price": "35",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -94,9 +94,9 @@
     "imageId": "",
     "category": "Accessories",
     "size": "M",
-    "price": "22",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -104,10 +104,10 @@
     "imageUrl": "",
     "imageId": "",
     "category": "Accessories",
-    "size": "L",
     "price": "40",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -115,10 +115,10 @@
     "imageUrl": "",
     "imageId": "",
     "category": "Accessories",
-    "size": "S",
     "price": "35",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -127,9 +127,9 @@
     "imageId": "",
     "category": "Accessories",
     "size": "M",
-    "price": "22",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -137,10 +137,10 @@
     "imageUrl": "",
     "imageId": "",
     "category": "Accessories",
-    "size": "L",
     "price": "40",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -148,10 +148,10 @@
     "imageUrl": "",
     "imageId": "",
     "category": "Accessories",
-    "size": "S",
     "price": "35",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -160,9 +160,9 @@
     "imageId": "",
     "category": "Accessories",
     "size": "M",
-    "price": "22",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -170,10 +170,10 @@
     "imageUrl": "",
     "imageId": "",
     "category": "Accessories",
-    "size": "L",
     "price": "40",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -181,10 +181,10 @@
     "imageUrl": "",
     "imageId": "",
     "category": "Accessories",
-    "size": "S",
     "price": "35",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -193,9 +193,9 @@
     "imageId": "",
     "category": "Accessories",
     "size": "M",
-    "price": "22",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -203,10 +203,10 @@
     "imageUrl": "",
     "imageId": "",
     "category": "Accessories",
-    "size": "L",
     "price": "40",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -214,10 +214,10 @@
     "imageUrl": "",
     "imageId": "",
     "category": "Accessories",
-    "size": "S",
     "price": "35",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -226,9 +226,9 @@
     "imageId": "",
     "category": "Accessories",
     "size": "M",
-    "price": "22",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -236,10 +236,10 @@
     "imageUrl": "",
     "imageId": "",
     "category": "Accessories",
-    "size": "L",
     "price": "40",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -247,10 +247,10 @@
     "imageUrl": "",
     "imageId": "",
     "category": "Accessories",
-    "size": "S",
     "price": "35",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -259,9 +259,9 @@
     "imageId": "",
     "category": "Accessories",
     "size": "M",
-    "price": "22",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -269,10 +269,10 @@
     "imageUrl": "",
     "imageId": "",
     "category": "Accessories",
-    "size": "L",
     "price": "40",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -280,10 +280,10 @@
     "imageUrl": "",
     "imageId": "",
     "category": "Accessories",
-    "size": "S",
     "price": "35",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -292,9 +292,9 @@
     "imageId": "",
     "category": "Accessories",
     "size": "M",
-    "price": "22",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -302,10 +302,10 @@
     "imageUrl": "",
     "imageId": "",
     "category": "Accessories",
-    "size": "L",
     "price": "40",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -313,10 +313,10 @@
     "imageUrl": "",
     "imageId": "",
     "category": "Accessories",
-    "size": "S",
     "price": "35",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Sunglasses",
@@ -325,8 +325,41 @@
     "imageId": "",
     "category": "Accessories",
     "size": "M",
-    "price": "22",
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
+  },
+  {
+    "name": "Sunglasses",
+    "description": "Brown sunglasses",
+    "imageUrl": "",
+    "imageId": "",
+    "category": "Accessories",
+    "price": "40",
+    "featured": "false",
+    "sold": "false",
+    "createdByAdmin": "true"
+  },
+  {
+    "name": "Sunglasses",
+    "description": "Red sunglasses",
+    "imageUrl": "",
+    "imageId": "",
+    "category": "Accessories",
+    "price": "35",
+    "featured": "false",
+    "sold": "false",
+    "createdByAdmin": "true"
+  },
+  {
+    "name": "Sunglasses",
+    "description": "White sunglasses",
+    "imageUrl": "",
+    "imageId": "",
+    "category": "Accessories",
+    "size": "M",
+    "featured": "false",
+    "sold": "false",
+    "createdByAdmin": "true"
   }
 ]

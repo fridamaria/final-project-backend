@@ -8,7 +8,8 @@
     "size": "S",
     "price": 30,
     "featured": "true",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Top",
@@ -19,7 +20,8 @@
     "size": "M",
     "price": 25,
     "featured": "true",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Jeans jacket",
@@ -30,7 +32,8 @@
     "size": "L",
     "price": 35,
     "featured": "true",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Dress",
@@ -40,8 +43,9 @@
     "category": "Dresses",
     "size": "S",
     "price": 30,
-    "featured": "false",
-    "sold": "false"
+    "featured": "true",
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Top",
@@ -52,7 +56,8 @@
     "size": "M",
     "price": 25,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Jeans jacket",
@@ -63,7 +68,8 @@
     "size": "L",
     "price": 35,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Dress",
@@ -74,7 +80,8 @@
     "size": "S",
     "price": 30,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Top",
@@ -85,7 +92,8 @@
     "size": "M",
     "price": 25,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Jeans jacket",
@@ -96,7 +104,8 @@
     "size": "L",
     "price": 35,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Dress",
@@ -107,7 +116,8 @@
     "size": "S",
     "price": 30,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Top",
@@ -118,7 +128,8 @@
     "size": "M",
     "price": 25,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Jeans jacket",
@@ -129,7 +140,8 @@
     "size": "L",
     "price": 35,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Dress",
@@ -140,7 +152,8 @@
     "size": "S",
     "price": 30,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Top",
@@ -151,7 +164,8 @@
     "size": "M",
     "price": 25,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Jeans jacket",
@@ -162,7 +176,8 @@
     "size": "L",
     "price": 35,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Dress",
@@ -173,7 +188,8 @@
     "size": "S",
     "price": 30,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Top",
@@ -184,7 +200,8 @@
     "size": "M",
     "price": 25,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Jeans jacket",
@@ -195,7 +212,8 @@
     "size": "L",
     "price": 35,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Dress",
@@ -206,7 +224,8 @@
     "size": "S",
     "price": 30,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Top",
@@ -217,7 +236,8 @@
     "size": "M",
     "price": 25,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Jeans jacket",
@@ -228,7 +248,8 @@
     "size": "L",
     "price": 35,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Dress",
@@ -239,7 +260,8 @@
     "size": "S",
     "price": 30,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Top",
@@ -250,7 +272,8 @@
     "size": "M",
     "price": 25,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Jeans jacket",
@@ -261,7 +284,8 @@
     "size": "L",
     "price": 35,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Dress",
@@ -272,7 +296,8 @@
     "size": "S",
     "price": 30,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Top",
@@ -283,7 +308,8 @@
     "size": "M",
     "price": 25,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Jeans jacket",
@@ -294,7 +320,8 @@
     "size": "L",
     "price": 35,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Dress",
@@ -305,7 +332,8 @@
     "size": "S",
     "price": 30,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Top",
@@ -316,7 +344,8 @@
     "size": "M",
     "price": 25,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Jeans jacket",
@@ -327,6 +356,7 @@
     "size": "L",
     "price": 35,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   }
 ]

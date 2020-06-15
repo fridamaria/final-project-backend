@@ -8,7 +8,8 @@
     "size": "S",
     "price": 30,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Top",
@@ -19,7 +20,8 @@
     "size": "M",
     "price": 25,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   },
   {
     "name": "Jeans jacket",
@@ -30,6 +32,7 @@
     "size": "L",
     "price": 35,
     "featured": "false",
-    "sold": "false"
+    "sold": "false",
+    "createdByAdmin": "true"
   }
 ]
