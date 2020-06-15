@@ -49,7 +49,7 @@ if (process.env.RESET_DB) {
 
   const seedDatabase = async () => {
     // Clears database
-    await Product.deleteMany()
+    await Product.deleteMany({ createdByAdmin: true })
 
     // Saves all data from productsData to the database
     await productsData.forEach(product => new Clothing(product).save())
@@ -97,14 +97,15 @@ app.get('/', (req, res) => {
 
 // All products
 app.get('/products', async (req, res) => {
-  const { page, createdByAdmin, sort } = req.query
+  const { page, createdByAdmin, featured, sort } = req.query
   // Pagination
   const pageNbr = +page || 1
   const perPage = 12
   const skip = perPage * (pageNbr - 1)
 
   const allProducts = await Product.find({
-    createdByAdmin: createdByAdmin
+    createdByAdmin: createdByAdmin,
+    featured: featured
   })
   const numProducts = allProducts.length
   const pages = Math.ceil(numProducts / perPage)
@@ -118,7 +119,8 @@ app.get('/products', async (req, res) => {
 
   try {
     const products = await Product.find({
-      createdByAdmin: createdByAdmin
+      createdByAdmin: createdByAdmin,
+      featured: featured
     })
       .sort(sortProducts(sort))
       .limit(perPage)
