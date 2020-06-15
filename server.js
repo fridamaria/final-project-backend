@@ -97,13 +97,15 @@ app.get('/', (req, res) => {
 
 // All products
 app.get('/products', async (req, res) => {
-  const { page, category, sort } = req.query
+  const { page, createdByAdmin, sort } = req.query
   // Pagination
   const pageNbr = +page || 1
   const perPage = 12
   const skip = perPage * (pageNbr - 1)
 
-  const allProducts = await Product.find()
+  const allProducts = await Product.find({
+    createdByAdmin: createdByAdmin
+  })
   const numProducts = allProducts.length
   const pages = Math.ceil(numProducts / perPage)
 
@@ -116,7 +118,7 @@ app.get('/products', async (req, res) => {
 
   try {
     const products = await Product.find({
-      // Lägga in att den ska hitta rätt kategori här
+      createdByAdmin: createdByAdmin
     })
       .sort(sortProducts(sort))
       .limit(perPage)
