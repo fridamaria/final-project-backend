@@ -107,6 +107,10 @@ app.get('/products', async (req, res) => {
       .sort(sortProducts(sort))
       .limit(perPage)
       .skip(skip)
+      .populate({
+        path: 'seller',
+        select: '_id name email',
+      })
     if (numProducts === 0) {
       res.status(200).json({ message: ERR_NO_PRODUCTS })
     } else if (+page > pages) {
@@ -166,6 +170,7 @@ app.post('/products', parser.single('image'), async (req, res) => {
         res.status(201).json({
           message: 'Product created.',
           id: product._id,
+          product: product
         })
       } else {
         res.status(400).json({
@@ -194,6 +199,10 @@ app.get('/products/:productId', async (req, res) => {
 
   try {
     const product = await Product.findOne({ _id: productId })
+      .populate({
+        path: 'seller',
+        select: '_id name email',
+      })
     res.status(200).json(product)
   } catch (err) {
     res.status(400).json({
