@@ -322,7 +322,7 @@ app.put('/users/:userId', async (req, res) => {
       user.telephone = telephone
       user.save()
       res.status(201).json({
-        user: userId,
+        user: user, //added user instead of userId
         message: USER_UPDATED
       })
     } else {
