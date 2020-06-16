@@ -282,6 +282,10 @@ app.get('/users/:userId', async (req, res) => {
           select: 'name price'
         }
       })
+      .populate({
+        path: 'products',
+        select: 'name description createdAt sold'
+      })
 
     res.status(200).json(user)
   } catch (err) {
@@ -307,6 +311,14 @@ app.put('/users/:userId', async (req, res) => {
 
   try {
     const user = await User.findOne({ _id: userId })
+      .populate({
+        path: 'orderHistory',
+        select: 'items createdAt status',
+        populate: {
+          path: 'items',
+          select: 'name price'
+        }
+      })
 
     if (user) {
       user.name = name
@@ -317,7 +329,7 @@ app.put('/users/:userId', async (req, res) => {
       user.telephone = telephone
       user.save()
       res.status(201).json({
-        user: userId,
+        user: user,
         message: USER_UPDATED
       })
     } else {
@@ -363,6 +375,18 @@ app.delete('/users/:userId', async (req, res) => {
 // Login existing user
 app.post('/sessions', async (req, res) => {
   const user = await User.findOne({ email: req.body.email })
+    .populate({
+      path: 'orderHistory',
+      select: 'items createdAt status',
+      populate: {
+        path: 'items',
+        select: 'name price'
+      }
+    })
+    .populate({
+      path: 'products',
+      select: 'imageUrl name description createdAt sold'
+    })
 
   if (user && bcrypt.compareSync(req.body.password, user.password)) {
     res.json(user)
