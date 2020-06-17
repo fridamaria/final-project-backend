@@ -79,6 +79,7 @@ const listEndpoints = require('express-list-endpoints')
 
 // Messages
 const PRODUCT_CREATED = 'Product created.'
+const PRODUCT_UPDATED = 'Product updated.'
 const USER_CREATED = 'User created.'
 const USER_UPDATED = 'User updated.'
 const USER_DELETED = 'User deleted.'
@@ -86,6 +87,7 @@ const ERR_INVALID_REQUEST = 'Invalid request.'
 const ERR_NO_PRODUCTS = 'No products found.'
 const ERR_NO_PAGE = 'No page found.'
 const ERR_CREATE_PRODUCT = 'Could not create product.'
+const ERR_UPDATE_PRODUCT = 'Could not update product.'
 const ERR_CREATE_USER = 'Could not create user.'
 const ERR_UPDATE_USER = 'Could not update user.'
 const ERR_DELETE_USER = 'Could not delete user.'
@@ -341,6 +343,43 @@ app.put('/users/:userId', async (req, res) => {
       res.status(404).json({
         user: userId,
         message: ERR_UPDATE_USER
+      })
+    }
+  } catch (err) {
+    res.status(400).json({
+      message: ERR_INVALID_REQUEST,
+      errors: err.errors
+    })
+  }
+})
+
+// Update user product status
+app.put('/users/:userId/products/:productId', authenticateUser)
+app.put('/users/:userId/products/:productId', async (req, res) => {
+  const { userId, productId } = req.params
+  const {
+    sold
+  } = req.body
+
+  try {
+    const product = await Product.findOne({ _id: productId })
+
+    if (product) {
+      product.sold = sold
+      product.save()
+      const user = await User.findOne({ _id: userId })
+        .populate({
+          path: 'products',
+          select: 'imageUrl name description createdAt sold'
+        })
+      res.status(201).json({
+        product: product,
+        userProducts: user.products,
+        message: PRODUCT_UPDATED
+      })
+    } else {
+      res.status(404).json({
+        message: ERR_UPDATE_PRODUCT
       })
     }
   } catch (err) {
