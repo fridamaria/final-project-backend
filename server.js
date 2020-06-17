@@ -46,7 +46,6 @@ mongoose.connect(mongoUrl, {
 })
 mongoose.Promise = Promise
 
-// Delete Seed-function? 
 if (process.env.RESET_DB) {
   console.log('Resetting database...')
 
@@ -322,7 +321,7 @@ app.put('/users/:userId', async (req, res) => {
       user.telephone = telephone
       user.save()
       res.status(201).json({
-        user: user, //added user instead of userId
+        user: user, //added user: user instead of user: userId
         message: USER_UPDATED
       })
     } else {
@@ -376,7 +375,7 @@ app.post('/sessions', async (req, res) => {
   }
 })
 
-// Post order / go to checkout
+// Place an order
 app.post('/orders', authenticateUser)
 app.post('/orders', async (req, res) => {
   const {
