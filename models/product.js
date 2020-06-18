@@ -16,7 +16,7 @@ const ProductSchema = new Schema({
     type: String,
     required: true,
     minlength: 3,
-    maxlength: 140,
+    maxlength: 70,
   },
   imageUrl: {
     type: String,
