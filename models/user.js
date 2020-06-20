@@ -7,12 +7,14 @@ const UserSchema = new Schema({
   name: {
     type: String,
     required: true,
-    minlength: 1
+    minlength: 1,
+    maxlength: 40
   },
   email: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
+    match: /\S+@\S+\.\S+/
   },
   password: {
     type: String,
