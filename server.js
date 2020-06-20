@@ -291,7 +291,7 @@ app.get('/users/:userId', async (req, res) => {
       })
       .populate({
         path: 'products',
-        select: 'name description createdAt sold'
+        select: 'imageUrl name description createdAt sold'
       })
 
     res.status(200).json(user)
