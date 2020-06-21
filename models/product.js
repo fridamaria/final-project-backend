@@ -28,7 +28,9 @@ const ProductSchema = new Schema({
   },
   price: {
     type: Number,
-    required: true
+    required: true,
+    min: 1,
+    max: 999999
   },
   featured: {
     type: Boolean,
