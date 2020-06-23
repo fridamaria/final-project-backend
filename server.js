@@ -155,9 +155,8 @@ app.get('/products', async (req, res) => {
   }
 })
 
-// May be used if users should to be able to post own clothes for sale, has to be adapted to include cloudinary
+// User product upload 
 app.post('/products', authenticateUser)
-// Cloudinary middleware included here:
 app.post('/products', parser.single('image'), async (req, res) => {
   const {
     name,
