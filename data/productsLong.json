@@ -2,7 +2,7 @@
   {
     "name": "Dress",
     "description": "Red summer dress",
-    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/v1591719845/products/oleg-ivanov-sg_gRhbYXhc-unsplash_y0zsqm.jpg",
+    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/c_scale,h_800/v1591719845/products/oleg-ivanov-sg_gRhbYXhc-unsplash_y0zsqm.jpg",
     "category": "Dresses",
     "size": "S",
     "price": 30,
@@ -13,7 +13,7 @@
   {
     "name": "Sweater",
     "description": "Vintage college sweater",
-    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/v1591719237/products/matas-katinas-7ITfJfAxxY4-unsplash_u92pc3.jpg",
+    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/c_scale,h_800/v1591719237/products/matas-katinas-7ITfJfAxxY4-unsplash_u92pc3.jpg",
     "category": "Tops",
     "size": "M",
     "price": 20,
@@ -24,7 +24,7 @@
   {
     "name": "Dotted dress",
     "description": "Black viscose dress with elegant dots",
-    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/v1592170010/products/dkskjftgxrw7cjs3i37i.jpg",
+    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/c_scale,h_800/v1592170010/products/dkskjftgxrw7cjs3i37i.jpg",
     "category": "Dresses",
     "size": "M",
     "price": 30,
@@ -35,7 +35,7 @@
   {
     "name": "Jeans jacket",
     "description": "80's jeans jacket",
-    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/v1591719253/products/santosh-verma-i49yJtWD57w-unsplash_bpyael.jpg",
+    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/c_scale,h_800/v1591719253/products/santosh-verma-i49yJtWD57w-unsplash_bpyael.jpg",
     "category": "Jackets",
     "size": "M",
     "price": 35,
