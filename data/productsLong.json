@@ -2,7 +2,7 @@
   {
     "name": "Dress",
     "description": "Red summer dress",
-    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/c_scale,h_800/v1591719845/products/oleg-ivanov-sg_gRhbYXhc-unsplash_y0zsqm.jpg",
+    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/q_auto:eco/v1591719845/products/oleg-ivanov-sg_gRhbYXhc-unsplash_y0zsqm.jpg",
     "category": "Dresses",
     "size": "S",
     "price": 30,
@@ -13,7 +13,7 @@
   {
     "name": "Sweater",
     "description": "Vintage college sweater",
-    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/c_scale,h_800/v1591719237/products/matas-katinas-7ITfJfAxxY4-unsplash_u92pc3.jpg",
+    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/q_auto:eco/v1591719237/products/matas-katinas-7ITfJfAxxY4-unsplash_u92pc3.jpg",
     "category": "Tops",
     "size": "M",
     "price": 20,
@@ -24,7 +24,7 @@
   {
     "name": "Dotted dress",
     "description": "Black viscose dress with elegant dots",
-    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/c_scale,h_800/v1592170010/products/dkskjftgxrw7cjs3i37i.jpg",
+    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/q_auto:eco/v1592170010/products/dkskjftgxrw7cjs3i37i.jpg",
     "category": "Dresses",
     "size": "M",
     "price": 30,
@@ -35,7 +35,7 @@
   {
     "name": "Jeans jacket",
     "description": "80's jeans jacket",
-    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/c_scale,h_800/v1591719253/products/santosh-verma-i49yJtWD57w-unsplash_bpyael.jpg",
+    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/q_auto:eco/v1591719253/products/santosh-verma-i49yJtWD57w-unsplash_bpyael.jpg",
     "category": "Jackets",
     "size": "M",
     "price": 35,
@@ -46,7 +46,7 @@
   {
     "name": "Orange blazer",
     "description": "Bright orange blazer",
-    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/v1591722693/products/etty-fidele-AzVexpHvuKY-unsplash_cmnqz5.jpg",
+    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/q_auto:eco/v1591722693/products/etty-fidele-AzVexpHvuKY-unsplash_cmnqz5.jpg",
     "category": "Jackets",
     "size": "M",
     "price": 35,
@@ -57,7 +57,7 @@
   {
     "name": "White dress",
     "description": "Airy white summer dress",
-    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/v1591722694/products/gbarkz-vqKnuG8GaQc-unsplash_z1wn5r.jpg",
+    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/q_auto:eco/v1591722694/products/gbarkz-vqKnuG8GaQc-unsplash_z1wn5r.jpg",
     "category": "Dresses",
     "size": "M",
     "price": 30,
@@ -68,7 +68,7 @@
   {
     "name": "Blazer",
     "description": "Classic navy blue blazer",
-    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/v1591722695/products/mehrad-vosoughi-iUQmEFtfdLw-unsplash_jg3wil.jpg",
+    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/q_auto:eco/v1591722695/products/mehrad-vosoughi-iUQmEFtfdLw-unsplash_jg3wil.jpg",
     "category": "Jackets",
     "size": "L",
     "price": 35,
@@ -79,7 +79,7 @@
   {
     "name": "Long dress",
     "description": "Fashionable long dress",
-    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/v1591722698/products/melody-jacob-Fd2iBxvXljA-unsplash_k8qoz4.jpg",
+    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/q_auto:eco/v1591722698/products/melody-jacob-Fd2iBxvXljA-unsplash_k8qoz4.jpg",
     "category": "Dresses",
     "size": "M",
     "price": 25,
@@ -90,7 +90,7 @@
   {
     "name": "Jacket",
     "description": "Cozy winter jacket",
-    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/v1591722698/products/noah-black-Hng0RpHDgHI-unsplash_nt2nc0.jpg",
+    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/q_auto:eco/v1591722698/products/noah-black-Hng0RpHDgHI-unsplash_nt2nc0.jpg",
     "category": "Jackets",
     "size": "M",
     "price": 30,
@@ -101,7 +101,7 @@
   {
     "name": "Prom dress",
     "description": "Sparkling prom dress",
-    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/v1591722698/products/jose-g-ortega-castro-HPFogbhaFw4-unsplash_q5frve.jpg",
+    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/q_auto:eco/v1591722698/products/jose-g-ortega-castro-HPFogbhaFw4-unsplash_q5frve.jpg",
     "category": "Dresses",
     "size": "XL",
     "price": 40,
@@ -112,7 +112,7 @@
   {
     "name": "Black skirt",
     "description": "Little black skirt, perfect for everyday wear",
-    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/v1591727836/products/irene-strong-iAJyVjLl-H4-unsplash_q3wrwo.jpg",
+    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/q_auto:eco/v1591727836/products/irene-strong-iAJyVjLl-H4-unsplash_q3wrwo.jpg",
     "category": "Skirts",
     "size": "M",
     "price": 25,
@@ -123,7 +123,7 @@
   {
     "name": "Yellow hoodie",
     "description": "Yellow hoodie",
-    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/v1592213721/products/photography-of-guy-wearing-yellow-hoodie-1183266_xmccae.jpg",
+    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/q_auto:eco/v1592213721/products/photography-of-guy-wearing-yellow-hoodie-1183266_xmccae.jpg",
     "category": "Tops",
     "size": "L",
     "price": 20,
@@ -134,7 +134,7 @@
   {
     "name": "Beach set",
     "description": "Skirt and top set",
-    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/v1592213724/products/photo-of-woman-standing-near-wall-2395921_wiioca.jpg",
+    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/q_auto:eco/v1592213724/products/photo-of-woman-standing-near-wall-2395921_wiioca.jpg",
     "category": "Dresses",
     "size": "XL",
     "price": 50,
@@ -145,7 +145,7 @@
   {
     "name": "Dotted dress",
     "description": "Office appropriate dotted dress",
-    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/v1592213725/products/woman-standing-at-outdoors-while-holding-black-leather-bag-1394882_g9pcck.jpg",
+    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/q_auto:eco/v1592213725/products/woman-standing-at-outdoors-while-holding-black-leather-bag-1394882_g9pcck.jpg",
     "category": "Dresses",
     "size": "S",
     "price": 40,

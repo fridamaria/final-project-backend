@@ -2,7 +2,7 @@
   {
     "name": "Earrings",
     "description": "Big chunky earrings",
-    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/v1591722706/products/caique-silva-BOHyxqepP9Y-unsplash_pmwnsl.jpg",
+    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/q_auto:eco/v1591722706/products/caique-silva-BOHyxqepP9Y-unsplash_pmwnsl.jpg",
     "category": "Accessories",
     "price": "10",
     "featured": "false",
@@ -12,7 +12,7 @@
   {
     "name": "Bracelets",
     "description": "Set of golden bracelets",
-    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/v1591722696/products/mike-von-qsJ5itg93WY-unsplash_j2fcwt.jpg",
+    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/q_auto:eco/v1591722696/products/mike-von-qsJ5itg93WY-unsplash_j2fcwt.jpg",
     "category": "Accessories",
     "price": "20",
     "featured": "false",
@@ -22,7 +22,7 @@
   {
     "name": "Straw bag",
     "description": "Large straw bag",
-    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/v1592214274/products/advert-bag-bamboo-bag-basket-bag-1942882_ff1r3i.jpg",
+    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/q_auto:eco/v1592214274/products/advert-bag-bamboo-bag-basket-bag-1942882_ff1r3i.jpg",
     "category": "Accessories",
     "price": "10",
     "featured": "false",
@@ -32,7 +32,7 @@
   {
     "name": "Sunglasses",
     "description": "Round sunglasses",
-    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/v1592214274/products/woman-wearing-white-and-black-shirt-1388888_i7lwlo.jpg",
+    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/q_auto:eco/v1592214274/products/woman-wearing-white-and-black-shirt-1388888_i7lwlo.jpg",
     "category": "Accessories",
     "price": "20",
     "featured": "false",
@@ -42,7 +42,7 @@
   {
     "name": "Sunglasses",
     "description": "Round sunglasses",
-    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/v1592214275/products/man-in-white-and-gray-shirt-wearing-sunglasses-against-1192609_kj7rrs.jpg",
+    "imageUrl": "https://res.cloudinary.com/dciqrlzem/image/upload/q_auto:eco/v1592214275/products/man-in-white-and-gray-shirt-wearing-sunglasses-against-1192609_kj7rrs.jpg",
     "category": "Accessories",
     "price": "20",
     "featured": "false",
