@@ -22,7 +22,7 @@ const cloudinary = cloudinaryFramework.v2;
 dotenv.config()
 
 cloudinary.config({
-  cloud_name: 'dciqrlzem', // this needs to be whatever you get from cloudinary
+  cloud_name: 'dciqrlzem', // cloud name from cloudinary
   api_key: process.env.CLOUDINARY_API_KEY,
   api_secret: process.env.CLOUDINARY_API_SECRET
 })
@@ -46,7 +46,6 @@ mongoose.connect(mongoUrl, {
 })
 mongoose.Promise = Promise
 
-// Delete Seed-function? 
 if (process.env.RESET_DB) {
   console.log('Resetting database...')
 
