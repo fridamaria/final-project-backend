@@ -154,7 +154,7 @@ app.get('/products', async (req, res) => {
   }
 })
 
-// User product upload 
+// Product upload
 app.post('/products', authenticateUser)
 app.post('/products', parser.single('image'), async (req, res) => {
   const {
@@ -216,7 +216,7 @@ app.post('/products', parser.single('image'), async (req, res) => {
   }
 })
 
-// Product detail page
+// Product details
 app.get('/products/:productId', async (req, res) => {
   const { productId } = req.params
 
@@ -389,6 +389,7 @@ app.put('/users/:userId/products/:productId', async (req, res) => {
 })
 
 // Delete user
+// Not implemented in frontend
 app.delete('/users/:userId', authenticateUser)
 app.delete('/users/:userId', async (req, res) => {
   const { userId } = req.params
@@ -473,7 +474,7 @@ app.post('/orders', async (req, res) => {
 })
 
 // See order summary
-// May only need this for dev purpose and not use in frontend as the users orders are included in /users/:userId
+// Not implemented in frontend
 app.get('/orders/:orderId', authenticateUser)
 app.get('/orders/:orderId', async (req, res) => {
   const { orderId } = req.params
